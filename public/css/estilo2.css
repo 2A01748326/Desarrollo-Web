@@ -1,0 +1,39 @@
+#e1{
+    color: azure;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    column-width: auto;
+}
+#about{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    text-align: justify;
+    column-width: auto;
+}
+#gamesResumen{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    text-align: justify;
+    column-width: auto;
+}
+#doom{
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    text-align: justify;
+}
+#d2{
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    text-align: justify;
+}
+#doomImg{
+    height: 120%;
+}
+#d2Img{
+    height: auto;
+}
