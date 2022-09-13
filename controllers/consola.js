@@ -58,7 +58,8 @@ function laF(input){
             }
             res+=(inp[a][i]);
         }
-        res += " ";
+        if (len>1)
+            res += " ";
     }
     return res;
 }
