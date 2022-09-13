@@ -2,13 +2,17 @@
 //const { response } = require('express');
 const express = require('express');
 const path = require('path');
+const consolaRoutes = require('./routes/consola');
 
 const app = express(); //Crear la aplicacion de express y la guardamos en app
 
 
 //MiddleWare
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.urlencoded({extended:true}));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/consola',consolaRoutes);
+
 //Definicion de neustra aplicacion
 //En los argumentos se especifica la entrada y la salida (argumentos y valores a regresar)
 app.get('/bigote', (request, response)=>{
@@ -40,7 +44,7 @@ app.get('/prueba2/:name/:age', (req, res)=>{
     res.send("Datos enviados por params " + req.params.name);
 });
 
-app.post('/prueba3', (req, res) =>{
+app.post('/prueba3', (req, res) =>{//mandados por postman
     console.log(req.body);
     res.send("Datos recibidos");
 });
