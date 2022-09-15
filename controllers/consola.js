@@ -28,8 +28,8 @@ exports.getConsultaConsola = (req, res)=>{
 }
 
 function pali(input){
-    const inp = input.replace(/\s/g,'');
-    //console.log(inp);
+    const inp = input.toLowerCase().replace(/\s/g,'');
+    console.log(inp);
     const l = inp.length;
     let i =0; 
     //i<l; i++
@@ -43,7 +43,8 @@ function pali(input){
 }
 
 function laF(input){
-    const inp = input.split(" ");
+    const inp = input.toLowerCase().split(" ");
+    console.log(inp);
     const len = inp.length;
     var res = '';
     for(let a = 0; a < len; a++){
