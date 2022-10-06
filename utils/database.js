@@ -3,8 +3,10 @@ const Sequelize = require('sequelize');
 const {applyRelations} = require('./relations');
 //Objeto de conexion
 const sequelize = new Sequelize('test', 'admin', 'myfreegame1', {
+//const sequelize = new Sequelize('test', 'admin', 'Password2026', {
     dialect:'mysql', 
     host:'database-1.cm2gcyurohy1.us-east-1.rds.amazonaws.com',
+    //host:'database-1.cne03r9weewa.us-east-1.rds.amazonaws.com',
     dialectOptions:{
         options:{
             //Caracteristicas especiales de la conexion
@@ -20,7 +22,8 @@ const sequelize = new Sequelize('test', 'admin', 'myfreegame1', {
 const modelDefiners = [
     require('../models/videojuego'),
     require('../models/consola'),
-    require('../models/company')
+    require('../models/company'),
+    require('../models/consolaVideojuego')
 ];
 
 //Adherir los modelos al objeto de conexion

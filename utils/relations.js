@@ -3,6 +3,7 @@ function applyRelations(sequelize){
     const Company = sequelize.models.Company;
     const Videojuego = sequelize.models.Videojuego;
     const Consola = sequelize.models.Consola;
+    const ConsolaVideojuego = sequelize.models.ConsolaVideojuego;
 
     //Company puede desarrollar varios videojuegos
     Company.hasMany(Videojuego);
@@ -12,7 +13,7 @@ function applyRelations(sequelize){
     //Un videojuego puede ejecutarse en muchas consolas
     Videojuego.belongsToMany(Consola,{through:ConsolaVideojuego});
     //Una consola puede tener muchos videojuegos
-    Consola.belongsToMany(Videojuego, {through:ConsolaVideojuego});
+    Consola.belongsToMany(Videojuego,{through:ConsolaVideojuego});
 
 }
 
